@@ -1,0 +1,320 @@
+{
+  "name": "{{Dataset_Name}}",
+  "compatibilityLevel": 1604,
+  "model": {
+    "name": "{{Dataset_Name}}",
+    "culture": "en-US",
+    "collation": "Latin1_General_100_BIN2_UTF8",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "master_8899",
+        "sourceLineageTag": "[dbo].[master_8899]",
+        "columns": [
+          {
+            "name": "product_id",
+            "dataType": "string",
+            "sourceColumn": "product_id",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "product_id",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "sale_id",
+            "dataType": "string",
+            "sourceColumn": "sale_id",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "sale_id",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "store_id",
+            "dataType": "string",
+            "sourceColumn": "store_id",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "store_id",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "sale_date",
+            "dataType": "string",
+            "sourceColumn": "sale_date",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "sale_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "quantity_sold",
+            "dataType": "string",
+            "sourceColumn": "quantity_sold",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "quantity_sold",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "total_amount",
+            "dataType": "string",
+            "sourceColumn": "total_amount",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "total_amount",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "mr_sale_id",
+            "dataType": "string",
+            "sourceColumn": "mr_sale_id",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "mr_sale_id",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "mr_store_id",
+            "dataType": "string",
+            "sourceColumn": "mr_store_id",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "mr_store_id",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "mr_sale_date",
+            "dataType": "string",
+            "sourceColumn": "mr_sale_date",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "mr_sale_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "mr_quantity_sold",
+            "dataType": "string",
+            "sourceColumn": "mr_quantity_sold",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "mr_quantity_sold",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "mr_total_amount",
+            "dataType": "string",
+            "sourceColumn": "mr_total_amount",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "mr_total_amount",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "master_8899",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "store_view_8899",
+        "sourceLineageTag": "[dbo].[store_view_8899]",
+        "columns": [
+          {
+            "name": "Date",
+            "dataType": "string",
+            "sourceColumn": "Date",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Item",
+            "dataType": "string",
+            "sourceColumn": "Item",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Item",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Category",
+            "dataType": "string",
+            "sourceColumn": "Category",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Category",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Quantity_Sold",
+            "dataType": "string",
+            "sourceColumn": "Quantity_Sold",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Quantity_Sold",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Unit_Price",
+            "dataType": "string",
+            "sourceColumn": "Unit_Price",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Unit_Price",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Total_Sales",
+            "dataType": "string",
+            "sourceColumn": "Total_Sales",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Total_Sales",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "store_view_8899",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DatabaseQuery",
+        "kind": "m",
+        "expression": "let\n    database = {{TDS_Endpoint}}\nin\n    database\n"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "SourceLineageTagType",
+        "value": "DatabaseFullyQualifiedName"
+      }
+    ]
+  }
+}

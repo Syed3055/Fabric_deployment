@@ -1,0 +1,38 @@
+[
+  {
+    "name": "store",
+    "path": "/Tables",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/store",
+        "itemId": "b6657328-3c33-4fa9-a235-af7b21f91f47",
+        "workspaceId": "7e2b16bd-364c-41f7-be99-554009ef7952"
+      }
+    }
+  },
+  {
+    "name": "master",
+    "path": "/Tables",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/master",
+        "itemId": "b6657328-3c33-4fa9-a235-af7b21f91f47",
+        "workspaceId": "7e2b16bd-364c-41f7-be99-554009ef7952"
+      }
+    }
+  },
+  {
+    "name": "Git_Table",
+    "path": "/Tables",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/Git_Table",
+        "itemId": "b6657328-3c33-4fa9-a235-af7b21f91f47",
+        "workspaceId": "7e2b16bd-364c-41f7-be99-554009ef7952"
+      }
+    }
+  }
+]

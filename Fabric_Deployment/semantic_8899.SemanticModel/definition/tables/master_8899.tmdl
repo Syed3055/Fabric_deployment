@@ -1,0 +1,123 @@
+table master_8899
+	lineageTag: cd67848a-9496-486d-936b-07476ccf9dee
+	sourceLineageTag: [dbo].[master_8899]
+
+	column product_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 94de5d84-80c7-4a03-bd20-dbafb4529ed3
+		sourceLineageTag: product_id
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column sale_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 51f94830-6c2a-4e3d-9e37-e7bf242dd1c5
+		sourceLineageTag: sale_id
+		summarizeBy: none
+		sourceColumn: sale_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column store_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7453d31a-ff63-4f2d-a5ca-a0bbe57f8df6
+		sourceLineageTag: store_id
+		summarizeBy: none
+		sourceColumn: store_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column sale_date
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: dae71e81-cda7-49ee-8ffb-03d0adf67043
+		sourceLineageTag: sale_date
+		summarizeBy: none
+		sourceColumn: sale_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column quantity_sold
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a913e28f-9b1f-4c96-82af-97c8ed6500b9
+		sourceLineageTag: quantity_sold
+		summarizeBy: none
+		sourceColumn: quantity_sold
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_amount
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d586c5a5-9a63-48e8-a7f6-3a5237fce62d
+		sourceLineageTag: total_amount
+		summarizeBy: none
+		sourceColumn: total_amount
+
+		annotation SummarizationSetBy = Automatic
+
+	column mr_sale_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 12e328d5-e85e-48a4-a13a-9f779d308168
+		sourceLineageTag: mr_sale_id
+		summarizeBy: none
+		sourceColumn: mr_sale_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column mr_store_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5e0e4148-fdbe-4cdf-bd8b-adb4a048b806
+		sourceLineageTag: mr_store_id
+		summarizeBy: none
+		sourceColumn: mr_store_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column mr_sale_date
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9d1f5b2d-1817-4e14-8dca-3668e7703df7
+		sourceLineageTag: mr_sale_date
+		summarizeBy: none
+		sourceColumn: mr_sale_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column mr_quantity_sold
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bff83f36-8a15-4649-89ae-6590b7564422
+		sourceLineageTag: mr_quantity_sold
+		summarizeBy: none
+		sourceColumn: mr_quantity_sold
+
+		annotation SummarizationSetBy = Automatic
+
+	column mr_total_amount
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d4c9d0b7-8542-46dd-bf3a-49bc07ccb9b6
+		sourceLineageTag: mr_total_amount
+		summarizeBy: none
+		sourceColumn: mr_total_amount
+
+		annotation SummarizationSetBy = Automatic
+
+	partition master_8899 = entity
+		mode: directLake
+		source
+			entityName: master_8899
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,73 @@
+table store_view_8899
+	lineageTag: 1050dec6-415a-42ff-a833-477f8a6c9709
+	sourceLineageTag: [dbo].[store_view_8899]
+
+	column Date
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0e00cccc-0baa-47eb-bc77-2fbfc61cc0ec
+		sourceLineageTag: Date
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Item
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d043c47d-1661-4f85-be57-cc738e3fb52c
+		sourceLineageTag: Item
+		summarizeBy: none
+		sourceColumn: Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8ea25aca-198c-4dba-bbc6-dc66cfc711e2
+		sourceLineageTag: Category
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity_Sold
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 193cb519-2536-45a4-ab7e-f1cf422b477a
+		sourceLineageTag: Quantity_Sold
+		summarizeBy: none
+		sourceColumn: Quantity_Sold
+
+		annotation SummarizationSetBy = Automatic
+
+	column Unit_Price
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 58085fc0-7f32-4a4e-8d10-ea57516a0c17
+		sourceLineageTag: Unit_Price
+		summarizeBy: none
+		sourceColumn: Unit_Price
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_Sales
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f0d9d6eb-bded-4636-b409-082ee4281fcd
+		sourceLineageTag: Total_Sales
+		summarizeBy: none
+		sourceColumn: Total_Sales
+
+		annotation SummarizationSetBy = Automatic
+
+	partition store_view_8899 = entity
+		mode: directLake
+		source
+			entityName: store_view_8899
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
