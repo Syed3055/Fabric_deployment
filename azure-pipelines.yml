@@ -1,0 +1,50 @@
+trigger:
+  branches:
+    include:
+      - main
+
+variables:
+  - group: FabricSecrets
+
+stages:
+  - stage: ValidateDev
+    jobs:
+      - job: Validate
+        steps:
+          - task: PowerShell@2
+            inputs:
+              targetType: 'inline'
+              script: |
+                Write-Host "Validating Dev workspace: ad4d990e-46f9-42ce-9c19-217e75f64575"
+                # Add schema or data validation logic here
+
+  - stage: DeployToUAT
+    dependsOn: ValidateDev
+    condition: succeeded()
+    jobs:
+      - job: DeployUAT
+        steps:
+          - task: PowerShell@2
+            inputs:
+              targetType: 'inline'
+              script: |
+                .\scripts\Get-PowerBIToken.ps1
+                $token = Get-PowerBIToken -clientId "$(clientId)" -clientSecret "$(clientSecret)" -tenantId "$(tenantId)"
+                Invoke-RestMethod -Uri "https://api.powerbi.com/v1.0/myorg/deploymentPipelines/$(pipelineId)/deploy" -Method POST -Headers @{Authorization = "Bearer $token"}
+
+  - stage: DeployToProd
+    dependsOn: DeployToUAT
+    condition: succeeded()
+    jobs:
+      - job: DeployProd
+        steps:
+          - task: ManualValidation@0
+            inputs:
+              instructions: 'Approve to deploy to Prod workspace: b667dce3-6ef1-4d01-abca-46c6784af0e4'
+          - task: PowerShell@2
+            inputs:
+              targetType: 'inline'
+              script: |
+                .\scripts\Get-PowerBIToken.ps1
+                $token = Get-PowerBIToken -clientId "$(clientId)" -clientSecret "$(clientSecret)" -tenantId "$(tenantId)"
+                Invoke-RestMethod -Uri "https://api.powerbi.com/v1.0/myorg/deploymentPipelines/$(pipelineId)/deploy" -Method POST -Headers @{Authorization = "Bearer $token"}
